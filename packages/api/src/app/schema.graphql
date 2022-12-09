@@ -1,14 +1,10 @@
-type Set {
+type Pokemon {
     id: Int!
-    name: String
-    year: Int
-    numParts: Int
+    name: String!
+    types: [String!]
+    weight: Int!
 }
 
 type Query {
-    allSets: [Set]
-}
-
-type Mutation {
-    addSet(name: String, year: String, numParts: Int): Set
+    pokemons: [Pokemon]
 }

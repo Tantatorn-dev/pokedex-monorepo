@@ -4,6 +4,8 @@ import { GraphQLModule } from '@nestjs/graphql';
 
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
+import PokeAPI from './poke-api/poke-api';
+import { PokemonResolver } from './pokemon.resolver';
 
 @Module({
   imports: [
@@ -13,6 +15,6 @@ import { AppService } from './app.service';
     }),
   ],
   controllers: [AppController],
-  providers: [AppService],
+  providers: [AppService, PokeAPI, PokemonResolver],
 })
 export class AppModule {}
