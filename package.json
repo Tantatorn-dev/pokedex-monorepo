@@ -2,7 +2,9 @@
   "name": "pokedex",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "start": "nx serve api && nx serve web"
+  },
   "private": true,
   "devDependencies": {
     "@nestjs/schematics": "^9.0.0",
@@ -59,6 +61,7 @@
     "@nestjs/platform-express": "^9.0.0",
     "apollo-server-express": "^3.11.1",
     "graphql": "^16.6.0",
+    "nes.css": "^2.3.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "reflect-metadata": "^0.1.13",
