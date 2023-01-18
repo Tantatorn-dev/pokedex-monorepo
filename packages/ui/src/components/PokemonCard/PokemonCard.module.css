@@ -1,3 +1,10 @@
-.propertyList {
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.pokeInfo {
+  margin-top: 1.25rem;
   text-align: left;
 }

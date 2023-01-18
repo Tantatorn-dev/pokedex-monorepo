@@ -3,4 +3,5 @@ interface PokemonEntity {
   name: string;
   types: string[];
   weight: number;
+  img: string;
 }

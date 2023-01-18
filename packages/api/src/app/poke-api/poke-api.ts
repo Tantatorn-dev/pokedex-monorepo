@@ -12,6 +12,9 @@ type PokemonDetail = {
       name: string;
     };
   }[];
+  sprites: {
+    front_default: string;
+  };
   weight: number;
 };
 
@@ -24,13 +27,14 @@ class PokeAPI extends RESTDataSource {
 
     return await Promise.all(
       result.map(async (item, index) => {
-        const pokemonDetail = await this.get(item.url) as PokemonDetail;
+        const pokemonDetail = (await this.get(item.url)) as PokemonDetail;
 
         return {
           id: index,
           name: item.name,
           types: pokemonDetail.types.map((type) => type.type.name),
           weight: pokemonDetail.weight,
+          img: pokemonDetail.sprites.front_default,
         };
       })
     );

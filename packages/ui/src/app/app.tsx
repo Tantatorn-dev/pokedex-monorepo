@@ -11,6 +11,7 @@ const POKEMONS_QUERY = gql`
       name
       types
       weight
+      img
     }
   }
 `;
@@ -25,8 +26,8 @@ export function App() {
       </div>
       <SearchBox />
       <div className={styles.pokemonList}>
-        {data?.pokemons.map((pokemon: PokemonEntity) => (
-          <PokemonCard key={pokemon?.id} pokemon={pokemon} />
+        {data?.pokemons?.map((pokemon: PokemonEntity, index: number) => (
+          <PokemonCard key={pokemon?.id} pokemon={pokemon} align={index % 2 === 0 ? 'left':'right'} />
         ))}
       </div>
     </div>
