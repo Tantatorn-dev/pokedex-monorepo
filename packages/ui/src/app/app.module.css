@@ -1,0 +1,14 @@
+/* Your styles goes here. */
+.container {
+  display: flex;
+  flex-direction: column;
+  margin-inline: 2.8rem;
+  row-gap: 2.2rem;
+}
+
+.pokemonList {
+  display: flex;
+  flex-direction: column;
+  margin-block: .8rem;
+  row-gap: 2.2rem;
+}
